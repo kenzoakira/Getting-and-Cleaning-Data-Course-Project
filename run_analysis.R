@@ -39,6 +39,3 @@ aggData<-aggregate(.~Activity.Label+Activity.Name+Subject.ID,data=strData,mean)
 aggData<-aggData[order(aggData$Activity.Label,aggData$Subject.ID),]
 #write aggregated data to a txt file
 write.table(aggData,"./data/tidyData.txt",row.names=FALSE)
-
-y<-read.table("./data/tidyData.txt",header=TRUE)
-
